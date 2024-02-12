@@ -40,7 +40,7 @@ class Bshroom(Tower):
             (self.range*2, self.range*2), pygame.SRCALPHA).convert_alpha()
         pygame.draw.circle(self.range_circle, (50, 50, 50, 128),
                            (self.range, self.range), self.range)
-        self.attack_value = 10  # Daño reducido a una cuarta parte
+        self.attack_value = 8  # Daño reducido a una cuarta parte
         self.shoot_interval = 5  # Velocidad de disparo duplicada
         self.aoe = self.upgrades[self.name]["base"]["aoe"]
         self.upgrade_cost = [self.upgrades[self.name]["0"][str(
