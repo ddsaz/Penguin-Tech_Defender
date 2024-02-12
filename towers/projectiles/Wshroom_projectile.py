@@ -1,3 +1,4 @@
+import math
 import pygame
 import os
 from towers.projectiles.Projectile import Projectile
@@ -15,13 +16,34 @@ class Wshroom_projectile(Projectile):
         - attack_type: chaine de caractère désignant le type d'attaque (Physique ou Magique)"""
 
         self.image = pygame.transform.scale(pygame.image.load(os.path.join(
-            "assets", "towers", "projectiles", "wshroom_projectile.png")).convert_alpha(), (screen_size[0]/120, screen_size[0]/120))
+            "assets", "towers", "projectiles", "wshroom_projectile.png")).convert_alpha(), (50, 50))
         self.width = self.image.get_width()
         self.height = self.image.get_height()
         self.rect = pygame.Rect(self.x, self.y, self.width, self.height)
         self.speed = 15
         self.attack_value = attack_value
         self.attack_type = attack_type
+
+    def rotate_towards_target(self):
+        """Rota la imagen del proyectil para que apunte hacia el objetivo."""
+        dx = self.target.x - self.x
+        dy = self.target.y - self.y
+        angle = math.degrees(math.atan2(-dy, dx))  # -90 grados para ajustar si el proyectil apunta hacia arriba inicialmente
+        self.image = pygame.transform.rotate(self.original_image, angle)
+        self.rect = self.image.get_rect(center=self.rect.center)  # Ajusta el rect para mantener el centro
+
+    def update(self):
+        """Actualiza la posición del proyectil y su orientación hacia el objetivo."""
+        # Calcula la diferencia de posición entre el proyectil y el objetivo
+        dx, dy = self.target.x - self.x, self.target.y - self.y
+        # Calcula el ángulo hacia el objetivo en radianes y luego lo convierte a grados
+        angle = math.atan2(dy, dx)
+        self.image = pygame.transform.rotate(self.original_image, -math.degrees(angle))
+        # Actualiza el rectángulo para que coincida con la nueva imagen rotada
+        self.rect = self.image.get_rect(center=(self.x, self.y))
+
+        # Mueve el proyectil hacia el objetivo (la lógica de movimiento se mantiene igual)
+
 
     def attack(self) -> None:
         """Méthode pour attaquer la cible
