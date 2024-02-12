@@ -20,7 +20,7 @@ class Ushroom(Tower):
             "assets", "towers", "urchin_shroom", "icon.png")).convert_alpha(), (80, 80))
         self.cost = self.upgrades[self.name]["base"]["cost"]
         self.value = self.cost
-        self.attack_type = "Physical"
+        self.attack_type = "Magic"
         self.placement_type = "Ground"
         self.range = self.screen_size[0]/9.6
         self.range_circle = pygame.Surface(
