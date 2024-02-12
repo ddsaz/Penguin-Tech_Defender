@@ -28,7 +28,7 @@ class WSshroom(Tower):
         self.image = self.images[round(self.image_index)]
         self.animating = False
         self.anim_speed = 0.3
-        self.attack_type = "Physical"
+        self.attack_type = "Magic"
         self.placement_type = "Ground"
         self.range = self.screen_size[0]/7
         self.range_circle = pygame.Surface(
