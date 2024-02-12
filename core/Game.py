@@ -49,7 +49,7 @@ class Game:
         self.selected_tower = None
         self.upgrade_menu = None
         self.health = 50
-        self.money = 50000 #original es 250
+        self.money = 300 #original es 250
         self.current_wave = 0
         self.enemy_index = 0
         self.time_since_last_enemy = 0
