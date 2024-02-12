@@ -460,7 +460,7 @@ class Game:
 
         stop_music(self.map.music)
         menu = Game_over_menu((self.width, self.height), self.escape_menu.sfx_state,
-                              "Dommage ! Tu as perdu !", (self.width/2.8, self.height/2.5))
+                              "Has perdido", (self.width/2.8, self.height/2.5))
         return menu.draw(self)
 
     def win(self) -> bool:
