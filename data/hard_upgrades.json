@@ -64,10 +64,10 @@
 
     "1": {  "path_idea" : "high attack speed but slightly lower damage",
         "1" : {"upgrade_cost": 150, "shoot_interval": 5, "icon": "up_speed_attack.png"},
-        "2" : {"upgrade_cost": 200, "shoot_interval": 5, "icon": "up_speed_attack.png"},
-        "3" : {"upgrade_cost": 300, "attack_value": -5, "shoot_interval": 10, "icon": "up_speed_attack_down_damage.png"},
-        "4" : {"upgrade_cost": 400, "attack_value": -5, "shoot_interval": 10, "icon": "up_speed_attack_down_damage.png"},
-        "5" : {"upgrade_cost": 500, "attack_value": -10, "shoot_interval": 20, "icon": "up_speed_attack_down_damage_2.png"}}
+        "2" : {"upgrade_cost": 200, "shoot_interval": 5, "attack_value": 2, "icon": "up_speed_attack.png"},
+        "3" : {"upgrade_cost": 300, "attack_value": -1, "shoot_interval": 10, "icon": "up_speed_attack_down_damage.png"},
+        "4" : {"upgrade_cost": 400, "attack_value": -1, "shoot_interval": 10, "icon": "up_speed_attack_down_damage.png"},
+        "5" : {"upgrade_cost": 500, "attack_value": -2, "shoot_interval": 20, "icon": "up_speed_attack_down_damage_2.png"}}
 },
 
 "Wizard Shroom" : {
