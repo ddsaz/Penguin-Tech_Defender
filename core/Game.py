@@ -479,5 +479,5 @@ class Game:
             json.dump(medals, medals_file, indent=4)
 
         menu = Game_over_menu((self.width, self.height), self.escape_menu.sfx_state,
-                              "Félicitations ! Tu as gagné !", (self.width/2.95, self.height/2.5))
+                              "¡Felicidades, has ganado!", (self.width/2.95, self.height/2.5))
         return menu.draw(self)
