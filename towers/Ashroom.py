@@ -32,7 +32,7 @@ class Ashroom(Tower):
         self.anim_speed = 0.3
         self.attack_type = "Magic"
         self.placement_type = "Ground"
-        self.range = self.screen_size[0]/4.23
+        self.range = self.screen_size[0]/3.8
         self.range_circle = pygame.Surface(
             (self.range*2, self.range*2), pygame.SRCALPHA).convert_alpha()
         pygame.draw.circle(self.range_circle, (50, 50, 50, 128),
